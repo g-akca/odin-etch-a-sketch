@@ -4,6 +4,14 @@ const popupButton = document.getElementById("popup-button");
 for (let i = 0; i < 256; i++) {
     const square = document.createElement("div");
     squareContainer.appendChild(square);
+
+    square.addEventListener("mouseenter", () => {
+        square.style.backgroundColor = "orange";
+    });
+
+    square.addEventListener("mouseleave", () => {
+        square.style.backgroundColor = "white";
+    });
 }
 
 popupButton.addEventListener("click", () => {
@@ -21,5 +29,13 @@ popupButton.addEventListener("click", () => {
         square.style.width = `${squareSize}px`;
         square.style.height = `${squareSize}px`;
         squareContainer.appendChild(square);
+
+        square.addEventListener("mouseenter", () => {
+            square.style.backgroundColor = "orange";
+        });
+
+        square.addEventListener("mouseleave", () => {
+            square.style.backgroundColor = "white";
+        });
     }
 });
