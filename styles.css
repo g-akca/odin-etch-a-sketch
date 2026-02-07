@@ -1,3 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+}
+
+#popup-button {
+    margin: 32px;
+    padding: 12px 6px;
+    background-color: rgb(220, 230, 194);
+    cursor: pointer;
+}
+
 #container {
     width: 640px;
     display: flex;
@@ -5,6 +19,7 @@
 }
 
 #container div {
+    background-color: white;
     box-sizing: border-box;
     width: 40px;
     height: 40px;
