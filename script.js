@@ -12,10 +12,12 @@ function createGrid(size) {
 
     for (let i = 0; i < size * size; i++) {
         const square = document.createElement("div");
+        square.style.opacity = 1;
         squareContainer.appendChild(square);
 
         square.addEventListener("mouseenter", () => {
-            square.style.backgroundColor = `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
+            if (!square.style.backgroundColor) square.style.backgroundColor =`rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
+            if (square.style.opacity > 0) square.style.opacity -= 0.1;
         });
     }
 }
