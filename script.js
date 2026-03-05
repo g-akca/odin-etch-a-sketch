@@ -8,10 +8,6 @@ for (let i = 0; i < 256; i++) {
     square.addEventListener("mouseenter", () => {
         square.style.backgroundColor = "orange";
     });
-
-    square.addEventListener("mouseleave", () => {
-        square.style.backgroundColor = "white";
-    });
 }
 
 popupButton.addEventListener("click", () => {
@@ -34,10 +30,6 @@ popupButton.addEventListener("click", () => {
 
         square.addEventListener("mouseenter", () => {
             square.style.backgroundColor = "orange";
-        });
-
-        square.addEventListener("mouseleave", () => {
-            square.style.backgroundColor = "white";
         });
     }
 });
