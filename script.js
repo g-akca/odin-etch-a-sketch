@@ -1,6 +1,10 @@
 const squareContainer = document.getElementById("container");
 const popupButton = document.getElementById("popup-button");
 
+function getRandomColor() {
+    return Math.floor(Math.random() * 256);
+}
+
 function createGrid(size) {
     squareContainer.innerHTML = "";
     squareContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -11,7 +15,7 @@ function createGrid(size) {
         squareContainer.appendChild(square);
 
         square.addEventListener("mouseenter", () => {
-            square.style.backgroundColor = "orange";
+            square.style.backgroundColor = `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
         });
     }
 }
